@@ -6,7 +6,7 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:11:05 by cdutel            #+#    #+#             */
-/*   Updated: 2024/11/18 18:10:17 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/12/18 14:37:25 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,11 @@ Fixed	Fixed::operator*( Fixed const &inst ) const
 
 Fixed	Fixed::operator/( Fixed const &inst ) const
 {
+	if (inst.getRawBits() == 0)
+	{
+		std::cerr << "Error: Division by zero" << std::endl;
+		return Fixed(0);
+	}
 	return (this->toFloat() / inst.toFloat());
 }
 

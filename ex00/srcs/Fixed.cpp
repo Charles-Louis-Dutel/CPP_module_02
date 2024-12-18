@@ -6,13 +6,13 @@
 /*   By: cdutel <cdutel@42student.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:11:05 by cdutel            #+#    #+#             */
-/*   Updated: 2024/11/14 18:09:53 by cdutel           ###   ########.fr       */
+/*   Updated: 2024/12/18 14:28:37 by cdutel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Fixed.hpp"
 
-const int	Fixed::_frac_bits = 8;
+int const	Fixed::_frac_bits = 8;
 
 Fixed::Fixed( void ) : _raw_bits(0)
 {
